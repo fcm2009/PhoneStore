@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The Phone Store - Delete a phone</title>
+
+    <script type="text/javascript">
+        function checkInput() {
+            var flag = true;
+
+            //id check
+            var id = document.getElementById("form")["id"];
+            var regex = /^.[0-9]{2}$/;
+            if(!regex.test(id.value)) {
+                id.setAttribute("style", "background-color:red");
+                flag = false;
+            }
+            else {
+                id.setAttribute("style", "background-color:");
+            }
+
+            if(flag) {
+                document.forms["form"].submit();
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Add a new Phone</h1>
+<p>Fill the phone ID:</p>
+
+<form id="form" method="post" action="DeletePhone.php">
+    <div><label>Phone ID:</label>
+        <input type="text" name="id">
+    </div>
+
+    <div>
+        <input type="button" name = "search" value="search" onclick="checkInput()">
+        <input type="reset" name = "reset" value="reset">
+    </div>
+</form>
+</body>
+</html>

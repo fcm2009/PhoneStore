@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>The Phone Store - Add a phone to the store</title>
+    <title>The Phone Store - Modify a phone to the store</title>
 
     <script type="text/javascript">
         function checkInput() {
@@ -48,10 +48,10 @@
     </script>
 </head>
 <body>
-    <h1>Add a new Phone</h1>
+    <h1>Modify a new Phone</h1>
     <p>Fill the following phone information pleas:</p>
 
-    <form id="form" method="post" action="AddPhoneToDB.php">
+    <form id="form" method="post" action="ModifyPhone.php">
        <div><label>Phone ID:</label>
         <input type="text" name="id">
         </div>
@@ -73,7 +73,7 @@
         </div>
 
         <div>
-            <input type="button" name = "search" value="add" onclick="checkInput()">
+            <input type="button" name = "search" value="modify" onclick="checkInput()">
             <input type="reset" name = "reset" value="reset">
         </div>
     </form>

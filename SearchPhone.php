@@ -7,13 +7,13 @@
 <body>
     <h1>Phone Information</h1>
     <?php
-        $db = mysqli_connect("localhost", "root", "hg,i,l,vh");
+        $db = mysqli_connect("localhost", "a4595078_root", "a4595078_root");
         if(!$db) {
             die("<h1>Error</h1>
                 <h2>Can not connect to the server. Try again later</h2>");
         }
 
-        if(!(mysqli_select_db($db, "ThePhoneStore"))) {
+        if(!(mysqli_select_db($db, "a4595078_db"))) {
             die("<h1>Error</h1>
                 <h2>Can not find the database. Try again later</h2>");
         }
@@ -30,13 +30,20 @@
         print("<tr>");
         print("<th>ID</th><th>Model</th><th>Color</th><th>Price</th><th>Touch Support</th>");
         print("</tr>");
-            foreach($result as $row) {
+        foreach($result as $row) {
             print("<tr>");
-                foreach($row as $value) {
-                print("<td>" . $value . "</td>");
+            foreach($row as $key => $value) {
+                if($key == "touch") {
+                    if($value == 1)
+                        print("<td>" . "true" . "</td>");
+                    else
+                        print("<td>" . "false" . "</td>");
                 }
-                print("</tr>");
+                else
+                    print("<td>" . $value . "</td>");
             }
+            print("</tr>");
+        }
         print("</table>");
     ?>
 </body>

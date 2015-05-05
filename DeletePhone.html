@@ -24,20 +24,28 @@
             }
         }
     </script>
+
+    <link type="text/css" rel="stylesheet" href="style.css" >
 </head>
 <body>
-<h1>Add a new Phone</h1>
-<p>Fill the phone ID:</p>
+    <a href="index.html" class="navigation">Home</a>
+    <a href="AddPhone.html" class="navigation">Add a phone</a>
+    <a href="SearchPhone.html" class="navigation">search for a phone</a>
+    <a href="DeletePhone.html" class="navigation">delete a phone from the store</a>
+    <a href="ModifyPhone.html" class="navigation">modify a phone in the store</a>
 
-<form id="form" method="post" action="DeletePhone.php">
-    <div><label>Phone ID:</label>
-        <input type="text" name="id">
-    </div>
+    <h1>Delete a phone</h1>
+    <p>Fill the phone ID:</p>
 
-    <div>
-        <input type="button" name = "search" value="delete" onclick="checkInput()">
-        <input type="reset" name = "reset" value="reset">
-    </div>
+    <form id="form" method="post" action="DeletePhone.php">
+        <div><label>Phone ID:</label>
+            <input type="text" name="id">
+        </div>
+
+        <div>
+            <input type="button" name = "search" value="delete" onclick="checkInput()">
+            <input type="reset" name = "reset" value="reset">
+        </div>
 </form>
 </body>
 </html>

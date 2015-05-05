@@ -33,13 +33,6 @@
         foreach($result as $row) {
             print("<tr>");
             foreach($row as $key => $value) {
-                if($key == "touch") {
-                    if($value == 1)
-                        print("<td>" . "true" . "</td>");
-                    else
-                        print("<td>" . "false" . "</td>");
-                }
-                else
                     print("<td>" . $value . "</td>");
             }
             print("</tr>");

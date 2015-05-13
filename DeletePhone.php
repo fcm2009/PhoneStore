@@ -13,7 +13,7 @@
                 <h2>Can not connect to the server. Try again later</h2>");
         }
 
-        if(!(mysqli_select_db($db, "a4595078_db"))) {
+        if(!(mysqli_select_db($db, "ThePhoneStore"))) {
             die("<h1>Error</h1>
                 <h2>Can not find the database. Try again later</h2>");
         }
